@@ -71,11 +71,13 @@ export default function Contact() {
           className="flex flex-col lg:w-2/4 lg:m-auto md:w-3/4 md:m-auto w-full md:py-8 md:mt-0"
         >
           <h3 className="w-full flex flex-col mt-8 mb-6 text-center lg:w-full md:w-1/2 md:w-full md:mt-0 sm:w-full sm:mt-0 sm:mb-5 font-medium text-2xl">
-            ¡Contrátame!
+            ¡Estoy listo para trabajar juntos!
           </h3>
           <p className="leading-relaxed mb-5 text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-            suscipit officia aspernatur veritatis. Asperiores, aliquid?
+            Si tenés un proyecto copado o una idea en mente y querés sumar fuerzas, no dudes en contactarme. 
+            Completa el formulario abajo y me pondré en contacto con vos en seguida.
+            <br className="lg:inline-block" />
+            ¡Espero tu mensaje para empezar a hacer algo genial juntos!
           </p>
           <div className="relative mb-4">
             <label

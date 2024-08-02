@@ -12,9 +12,9 @@ export default function Skills() {
             Habilidades y Tecnologías
           </h1>
           <p className="text-base leading-relaxed x1:w-2/4 lg:w-3/4 mx-auto">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sit
-            ipsa delectus eum quo voluptas aspernatur accusantium distinctio
-            possimus est.
+            Aquí están algunas de las herramientas y tecnologías que utilizo para construir aplicaciones web.
+            <br className="lg:inline-block" />
+            Siempre estoy explorando nuevas tecnologías para mantener mis habilidades frescas y relevantes.
           </p>
         </div>
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">

@@ -7,13 +7,15 @@ export default function About() {
         <div className="lg:flex-grow flex flex-col lg:ml-10 lg:pr-24 md:w-1/2 md:pr-16 md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hola, soy Pedro.
-            <br className="lg:inline-block" />
-            Me encanta construir aplicaciones web
           </h1>
           <p className="mb-8 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-            laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-            Laborum, voluptas natus?
+            Soy estudiante de desarrollo web y me apasiona convertir ideas en aplicaciones web.
+            <br className="lg:inline-block" />
+            Cada proyecto es una oportunidad para innovar y ofrecer algo útil y atractivo.
+            <br className="lg:inline-block" />
+            ¿Te gustaría trabajar conmigo? ¡Hablemos!
+            <br className="lg:inline-block" />
+            Explorá mis proyectos anteriores y descubrí cómo podemos hacer algo increíble juntos.
           </p>
           <div className="flex justify-center">
             <a
