@@ -30,16 +30,13 @@ export default function Contact() {
       className="relative"
     >
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        {/* <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
             width="100%"
             height="100%"
             title="map"
             className="absolute inset-0"
-            frameBorder={0}
-            marginHeight={0}
-            marginWidth={0}
-            style={{ filter: "opacity(0.7" }}
+            style={{ filter: "opacity(0.7)" }}
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.555623647184!2d-58.77989091070315!3d-34.539484884422066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9784d097b435%3A0x4f22f7d0db83d20f!2sCDF%2C%20Vicente%20Fatone%204536%2C%20B1665%20Jos%C3%A9%20C.%20Paz%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses-419!2sus!4v1709771006833!5m2!1ses-419!2sus"
           />
           <div className="bg-gray-900 relative flex flex-wrap py-6 pr-5 rounded shadow-md">
@@ -60,23 +57,23 @@ export default function Contact() {
               <a className="text-indigo-400 leading-relaxed">
                 hoffmannpedro18@gmail.com
               </a>
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
+              <h2 href="mailto:hoffmannpedro18@gmail.com" className="title-font font-semibold text-white tracking-widest text-xs mt-4">
                 NUMERO DE TELÉFONO
               </h2>
               <p className="leading-relaxed">11-2186-6976</p>
             </div>
           </div>
-        </div>
+        </div> */}
         <form
           netlify
           name="contact"
           onSubmit={handleSubmit}
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
+          className="flex flex-col lg:w-2/4 lg:m-auto md:w-3/4 md:m-auto w-full md:py-8 md:mt-0"
         >
-          <h2 className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full mmd:py-8 mt-8 md:mt_0">
+          <h3 className="w-full flex flex-col mt-8 mb-6 text-center lg:w-full md:w-1/2 md:w-full md:mt-0 sm:w-full sm:mt-0 sm:mb-5 font-medium text-2xl">
             ¡Contrátame!
-          </h2>
-          <p className="leading-relaxed mb-5">
+          </h3>
+          <p className="leading-relaxed mb-5 text-center">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
             suscipit officia aspernatur veritatis. Asperiores, aliquid?
           </p>
