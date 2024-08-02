@@ -34,7 +34,7 @@ export default function About() {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="src\assets\pepe.png"
+            src="https://raw.githubusercontent.com/HoffmannPedro/mi-portfolio/master/src/assets/pepe.png?token=GHSAT0AAAAAACVUDPN462TQWN4LDE3M6AREZVNDXUQ"
           />
         </div>
       </div>

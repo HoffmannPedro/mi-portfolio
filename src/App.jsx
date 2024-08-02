@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import "/node_modules/tailwindcss/tailwind.css";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
