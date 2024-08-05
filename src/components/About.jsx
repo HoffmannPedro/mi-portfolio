@@ -32,7 +32,7 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 lg:mr-10">
           <img
             className="object-cover object-center rounded m-auto lg:ml-auto"
             alt="img_profile"
