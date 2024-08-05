@@ -23,8 +23,9 @@ export default function Contact() {
             ¡Estoy listo para trabajar juntos!
           </h3>
           <p className="leading-relaxed mb-5 text-center">
-            Si tenés un proyecto copado o una idea en mente y querés sumar fuerzas, no dudes en contactarme. 
-            Completa el formulario abajo y me pondré en contacto con vos en seguida.
+            Si tenés un proyecto o una idea en mente y querés sumar fuerzas, no dudes en contactarme. 
+            <br className="lg:inline-block" />
+            Completa el formulario abajo y en breve me estaré comunicando con vos.
             <br className="lg:inline-block" />
             ¡Espero tu mensaje para empezar a hacer algo genial juntos!
           </p>
