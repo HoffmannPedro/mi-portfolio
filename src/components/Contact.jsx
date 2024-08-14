@@ -16,8 +16,7 @@ export default function Contact() {
 
   const handleDownloadClick = () => {
     Swal.fire({
-      title: 'Quieres descargar el archivo?',
-      text: "Confirma tu descarga o cancélala",
+      title: 'Estás a punto de descargar mi C.V.',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Descargar',
