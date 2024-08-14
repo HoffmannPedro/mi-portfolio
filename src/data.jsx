@@ -40,34 +40,34 @@ export const projects = [
 export const skills = [
   {
     name: "JavaScript",
-    icon: "src/assets/icons/js.svg"
+    icon: "https://github.com/HoffmannPedro/mi-portfolio/blob/master/src/assets/icons/js.svg"
   },
   {
     name: "React",
-    icon: "src/assets/icons/react.svg"
+    icon: "https://github.com/HoffmannPedro/mi-portfolio/blob/master/src/assets/icons/react.svg"
   },
   {
     name: "HTML",
-    icon: "src/assets/icons/html.svg"
+    icon: "https://github.com/HoffmannPedro/mi-portfolio/blob/master/src/assets/icons/html.svg"
   },
   {
     name: "CSS",
-    icon: "src/assets/icons/css.svg"
+    icon: "https://github.com/HoffmannPedro/mi-portfolio/blob/master/src/assets/icons/css.svg"
   },
   {
     name: "Bootstrap",
-    icon: "src/assets/icons/bootstrap.svg"
+    icon: "https://github.com/HoffmannPedro/mi-portfolio/blob/master/src/assets/icons/bootstrap.svg"
   },
   {
     name: "Tailwind CSS",
-    icon: "src/assets/icons/tailwind.svg"
+    icon: "https://github.com/HoffmannPedro/mi-portfolio/blob/master/src/assets/icons/tailwind.svg"
   },
   {
     name: "GIT",
-    icon: "src/assets/icons/git.svg"
+    icon: "https://github.com/HoffmannPedro/mi-portfolio/blob/master/src/assets/icons/git.svg"
   },
   {
     name: "JAVA",
-    icon: "src/assets/icons/java.svg"
+    icon: "https://github.com/HoffmannPedro/mi-portfolio/blob/master/src/assets/icons/java.svg"
   }
 ];
