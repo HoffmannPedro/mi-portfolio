@@ -116,10 +116,10 @@ export default function Contact() {
       <div id="footer" className="container w-full mx-auto px-5 pb-5 flex-row md:flex justify-end">
         <div className="flex justify-center w-full md:w-1/3">
           <a href="https://www.linkedin.com/in/hoffmannpedro/" className="px-5 hover:animate-bounce">
-            <img src="src\assets\icons\linkedin.svg" alt="img-linkedin" className="md:size-14"/>
+            <img src="https://raw.githubusercontent.com/HoffmannPedro/mi-portfolio/916dd176db65ef9a15599e765f5f5937e4e767b9/src/assets/icons/linkedin.svg" alt="img-linkedin" className="md:size-14"/>
           </a>
           <a href="https://github.com/HoffmannPedro" className="px-5 hover:animate-bounce">
-            <img src="src\assets\icons\github.svg" alt="img-github" className="size-14"/>
+            <img src="https://raw.githubusercontent.com/HoffmannPedro/mi-portfolio/916dd176db65ef9a15599e765f5f5937e4e767b9/src/assets/icons/github.svg" alt="img-github" className="size-14"/>
           </a>
         </div>
         <div className="flex justify-center pt-5 md:pt-0 md:justify-end md:w-1/3">
