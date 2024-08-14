@@ -34,16 +34,40 @@ export const projects = [
     image:
       "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/653b0549468d5e00084b6a1d/screenshot_2023-10-27-00-33-21-0000.png&fit=cover&h=500&w=800",
     link: "https://calculadoracursojs.netlify.app",
-  },
+  }
 ];
 
 export const skills = [
-  "JavaScript",
-  "React",
-  "HTML",
-  "CSS",
-  "Bootstrap",
-  "Tailwind CSS",
-  "GIT",
-  "JAVA"
+  {
+    name: "JavaScript",
+    icon: "src/assets/icons/js.svg"
+  },
+  {
+    name: "React",
+    icon: "src/assets/icons/react.svg"
+  },
+  {
+    name: "HTML",
+    icon: "src/assets/icons/html.svg"
+  },
+  {
+    name: "CSS",
+    icon: "src/assets/icons/css.svg"
+  },
+  {
+    name: "Bootstrap",
+    icon: "src/assets/icons/bootstrap.svg"
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "src/assets/icons/tailwind.svg"
+  },
+  {
+    name: "GIT",
+    icon: "src/assets/icons/git.svg"
+  },
+  {
+    name: "JAVA",
+    icon: "src/assets/icons/java.svg"
+  }
 ];
