@@ -40,7 +40,7 @@ export const projects = [
 export const skills = [
   {
     name: "JavaScript",
-    icon: "https://raw.githubusercontent.com/HoffmannPedro/mi-portfolio/cef65cf0116b3bfd32d016c1355bbeac49270825/src/assets/icons/js.svg"
+    icon: "https://raw.githubusercontent.com/HoffmannPedro/mi-portfolio/cc53df70f07d4186e3359900847945840448dba3/src/assets/icons/js.svg"
   },
   {
     name: "React",

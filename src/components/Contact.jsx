@@ -1,16 +1,44 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import swal from 'sweetalert';
+import Swal from "sweetalert2";
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm("mqazqglq");
 
+  // Funcion para ventana de confirmacion de envio de formulario.
+  const [state, handleSubmit] = useForm("mqazqglq");
   if (state.succeeded) {
     setTimeout(() => {
       window.location.reload(); // Recargar la página
     }, 3000);
     return swal("¡Mensaje enviado con éxito!", "Sera respondido a la brevedad", "success");
   }
+
+  const handleDownloadClick = () => {
+    Swal.fire({
+      title: 'Quieres descargar el archivo?',
+      text: "Confirma tu descarga o cancélala",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Descargar',
+      cancelButtonText: 'Cancelar',
+      background: '#0D1F22',
+      color: '#fff',
+      confirmButtonColor: '#2E5902',
+      cancelButtonColor: '#A62B1F',
+      iconColor: '#C50808',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Si se confirma, iniciar la descarga
+        const link = document.createElement('a');
+        link.href = 'https://drive.usercontent.google.com/u/0/uc?id=1zMHJaHfeF_AidwAFS3RGkjScaJ6AuQrr&export=download';
+        link.download = 'CV. Pedro Hoffmann.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    });
+  };
 
   return (
     <section id="contact" className="relative">
@@ -78,12 +106,35 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            className="text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 hover:transition-all hover:duration-300 rounded text-lg"
             disabled={state.submitting}
           >
             Enviar
           </button>
         </form>
+      </div>
+      <div id="footer" className="container w-full mx-auto px-5 pb-5 flex-row md:flex justify-end">
+        <div className="flex justify-center w-full md:w-1/3">
+          <a href="https://www.linkedin.com/in/hoffmannpedro/" className="px-5 hover:animate-bounce">
+            <img src="src\assets\icons\linkedin.svg" alt="img-linkedin" className="md:size-14"/>
+          </a>
+          <a href="https://github.com/HoffmannPedro" className="px-5 hover:animate-bounce">
+            <img src="src\assets\icons\github.svg" alt="img-github" className="size-14"/>
+          </a>
+        </div>
+        <div className="flex justify-center pt-5 md:pt-0 md:justify-end md:w-1/3">
+          <div className="flex hover:scale-110 hover:transition-all">
+            <button onClick={handleDownloadClick} className="content-center text-white font-semibold text-lg">¡Descarga mi CV!</button>
+            <img src="https://img.icons8.com/color/48/000000/pdf.png" alt="pdf" className="size-8 my-auto"/>
+          </div>
+          <span className="relative flex h-3 w-3 lg:mr-5 top-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+          </span>
+        </div>
+      </div>
+      <div id="copyright" className="flex justify-center text-sm mt-5 pb-1">
+        <p>Desarrollado por Pedro Hoffmann ©</p>
       </div>
     </section>
   );
