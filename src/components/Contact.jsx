@@ -2,8 +2,9 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import swal from 'sweetalert';
 import Swal from "sweetalert2";
+import { texts } from "../data";
 
-export default function Contact() {
+export default function Contact({language}) {
 
   // Funcion para ventana de confirmacion de envio de formulario.
   const [state, handleSubmit] = useForm("mqazqglq");
@@ -11,16 +12,16 @@ export default function Contact() {
     setTimeout(() => {
       window.location.reload(); // Recargar la página
     }, 3000);
-    return swal("¡Mensaje enviado con éxito!", "Sera respondido a la brevedad", "success");
+    return swal(texts.contact[language].sbmtMsg.title, texts.contact[language].sbmtMsg.p, "success");
   }
 
   const handleDownloadClick = () => {
     Swal.fire({
-      title: 'Estás a punto de descargar mi C.V.',
+      title: texts.contact[language].cvMsg.title,
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Descargar',
-      cancelButtonText: 'Cancelar',
+      confirmButtonText: texts.contact[language].cvMsg.confirmBtn,
+      cancelButtonText: texts.contact[language].cvMsg.cancelBtn,
       background: '#0D1F22',
       color: '#fff',
       confirmButtonColor: '#2E5902',
@@ -47,18 +48,18 @@ export default function Contact() {
           className="flex flex-col lg:w-2/4 lg:m-auto md:w-3/4 md:m-auto w-full md:py-8 md:mt-0"
         >
           <h3 className="w-full flex flex-col mt-8 mb-6 text-center lg:w-full md:w-1/2 md:w-full md:mt-0 sm:w-full sm:mt-0 sm:mb-5 font-medium text-2xl">
-            ¡Estoy listo para trabajar juntos!
+            {texts.contact[language].h3}
           </h3>
           <p className="leading-relaxed mb-5 text-center">
-            Si tenés un proyecto o una idea en mente y querés sumar fuerzas, no dudes en contactarme. 
+            {texts.contact[language].p1} 
             <br className="lg:inline-block" />
-            Completa el formulario abajo y en breve me estaré comunicando con vos.
+            {texts.contact[language].p2}
             <br className="lg:inline-block" />
-            ¡Espero tu mensaje para empezar a hacer algo genial juntos!
+            {texts.contact[language].p3}
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-              Nombre
+              {texts.contact[language].label1}
             </label>
             <input
               type="text"
@@ -74,7 +75,7 @@ export default function Contact() {
           </div>
           <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-              Correo Electrónico
+              {texts.contact[language].label2}
             </label>
             <input
               type="email"
@@ -90,7 +91,7 @@ export default function Contact() {
           </div>
           <div className="relative mb-4">
             <label htmlFor="message" className="leading-7 text-sm text-gray-400">
-              Mensaje
+              {texts.contact[language].label3}
             </label>
             <textarea
               id="message"
@@ -108,22 +109,22 @@ export default function Contact() {
             className="text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 hover:transition-all hover:duration-300 rounded text-lg"
             disabled={state.submitting}
           >
-            Enviar
+            {texts.contact[language].btnSubmit}
           </button>
         </form>
       </div>
       <div id="footer" className="container w-full mx-auto px-5 pb-5 flex-row md:flex justify-end">
         <div className="flex justify-center w-full md:w-1/3">
           <a href="https://www.linkedin.com/in/hoffmannpedro/" className="px-5 hover:animate-bounce">
-            <img src="https://raw.githubusercontent.com/HoffmannPedro/mi-portfolio/916dd176db65ef9a15599e765f5f5937e4e767b9/src/assets/icons/linkedin.svg" alt="img-linkedin" className="md:size-14"/>
+            <img src="icons/linkedin.svg" alt="img-linkedin" className="md:size-14"/>
           </a>
           <a href="https://github.com/HoffmannPedro" className="px-5 hover:animate-bounce">
-            <img src="https://raw.githubusercontent.com/HoffmannPedro/mi-portfolio/916dd176db65ef9a15599e765f5f5937e4e767b9/src/assets/icons/github.svg" alt="img-github" className="size-14"/>
+            <img src="icons/github.svg" alt="img-github" className="size-14"/>
           </a>
         </div>
         <div className="flex justify-center pt-5 md:pt-0 md:justify-end md:w-1/3">
           <div className="flex hover:scale-110 hover:transition-all">
-            <button onClick={handleDownloadClick} className="content-center text-white font-semibold text-lg">¡Descarga mi CV!</button>
+            <button onClick={handleDownloadClick} className="content-center text-white font-semibold text-lg">{texts.contact[language].btnCv}</button>
             <img src="https://img.icons8.com/color/48/000000/pdf.png" alt="pdf" className="size-8 my-auto"/>
           </div>
           <span className="relative flex h-3 w-3 lg:mr-5 top-2">
@@ -133,7 +134,7 @@ export default function Contact() {
         </div>
       </div>
       <div id="copyright" className="flex justify-center text-sm mt-5 pb-1">
-        <p>Desarrollado por Pedro Hoffmann ©</p>
+        <p>{texts.contact[language].copyright}</p>
       </div>
     </section>
   );
