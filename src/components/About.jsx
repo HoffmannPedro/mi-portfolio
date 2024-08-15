@@ -37,7 +37,7 @@ export default function About({language}) {
           <img
             className="object-cover object-center rounded m-auto lg:ml-auto"
             alt="img_profile"
-            src="public\pepe.png"
+            src="pepe.png"
           />
         </div>
       </div>
