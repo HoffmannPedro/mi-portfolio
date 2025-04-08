@@ -5,8 +5,8 @@ export const projects = [
     title: "Mocca Blog",
     subtitle: "HTML / CSS",
     description: {
-      es: "Un blog con información sobre el café, realizado como mi primer proyecto en un curso de Desarrollo Web en Udemy",
-      en: "A blog with information about coffee, created as my first project in a Web Development course on Udemy"
+      es: "Blog informativo sobre el café, desarrollado como mi primer proyecto en un curso de Desarrollo Web en Udemy.",
+      en: "An informative blog about coffee, created as my first project in a Web Development course on Udemy."
     },
     image:
       "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/61b3c1ab6bfdb1e2cc419427/screenshot_2021-12-10-21-07-57-0000.png&fit=cover&h=500&w=800",
@@ -16,8 +16,8 @@ export const projects = [
     title: "EDM Festival",
     subtitle: "HTML / CSS / Javascript",
     description: {
-      es: "Proyecto de práctica: un sitio web de un Festival de Música desarrollado durante un curso de Desarrollo Web Fullstack en Udemy",
-      en: "A practice project: a Music Festival website developed during a Fullstack Web Development course on Udemy"
+      es: "Sitio web para un festival de música electrónica, realizado como práctica en un curso de Desarrollo Web Fullstack en Udemy.",
+      en: "Website for an electronic music festival, built as a practice project during a Fullstack Web Development course on Udemy."
     },
     image:
       "/projects-imgs/EDM-festival-image.png",
@@ -27,8 +27,8 @@ export const projects = [
     title: "Pokedex",
     subtitle: "HTML / CSS / Javascript",
     description: {
-      es: "Un Pokedex básico, desarrollado para el Curso de Algoritmos JavaScript y Estructuras de Datos de freeCodeCamp",
-      en: "A basic Pokédex, developed for the JavaScript Algorithms and Data Structures course on freeCodeCamp"
+      es: "Una Pokédex básica, desarrollada como parte del curso de Algoritmos y Estructuras de Datos en JavaScript de freeCodeCamp.",
+      en: "A basic Pokédex built as part of the JavaScript Algorithms and Data Structures course from freeCodeCamp."
     },
     image:
       "/projects-imgs/pokedex-image.png",
@@ -38,8 +38,8 @@ export const projects = [
     title: "Task List",
     subtitle: "HTML / CSS / Javascript / React / MaterialUI",
     description: {
-      es: "Una lista de tareas desarrollada como trabajo final en el curso de REACT JS dictado por UTN en el marco de Argentina Programa 4.0",
-      en: "A to-do list developed as the final project in the REACT JS course offered by UTN as part of Argentina Programa 4.0"
+      es: "Lista de tareas desarrollada como proyecto final del curso de React JS dictado por UTN en Argentina Programa 4.0.",
+      en: "To-do list developed as the final project of the React JS course taught by UTN in Argentina Programa 4.0."
     },
     image:
       "/projects-imgs/listaTareas-image.png",
@@ -49,8 +49,8 @@ export const projects = [
     title: "Calculadora",
     subtitle: "HTML / CSS / Javascript",
     description: {
-      es: "Una calculadora simple que realiza las funciones básicas de suma, resta, multiplicación y división",
-      en: "A simple calculator that performs basic functions such as addition, subtraction, multiplication, and division"
+      es: "Calculadora simple que realiza operaciones básicas: suma, resta, multiplicación y división.",
+      en: "Simple calculator that performs basic operations: addition, subtraction, multiplication, and division."
     },
     image:
       "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/653b0549468d5e00084b6a1d/screenshot_2023-10-27-00-33-21-0000.png&fit=cover&h=500&w=800",
@@ -98,20 +98,18 @@ export const skills = [
 export const texts = {
   about: {
     es : {
-      h1: 'Hola, soy Pedro.',
-      p1: 'Soy estudiante de desarrollo web y me apasiona convertir ideas en aplicaciones web.',
-      p2: 'Cada proyecto es una oportunidad para innovar y ofrecer algo útil y atractivo.',
-      p3: '¿Te gustaría trabajar conmigo? ¡Hablemos!',
-      p4: 'Explorá mis proyectos anteriores y descubrí cómo podemos hacer algo increíble juntos.',
+      p1: 'Soy estudiante de Desarrollo Web y actualmente curso la carrera de Licenciatura en Sistemas.',
+      p2: 'Me apasiona transformar ideas en aplicaciones web funcionales y atractivas.',
+      p3: 'Cada proyecto representa un nuevo desafío para crecer y ofrecer soluciones creativas.',
+      p4: '¿Querés trabajar conmigo? Explorá mis proyectos y descubramos cómo podemos crear algo increíble juntos.',
       btn1: 'Trabaja conmigo',
       btn2: 'Mira mis trabajos anteriores'
     },
     en: {
-      h1: "Hello, I'm Pedro.",
-      p1: "I am a web development student, and I'm passionate about turning ideas into web applications.",
-      p2: "Each project is an opportunity to innovate and provide something useful and appealing.",
-      p3: "Would you like to work with me? Let's talk!",
-      p4: "Explore my previous projects and see how we can create something amazing together.",
+      p1: 'I’m a Web Development student currently pursuing a Bachelor’s Degree in Information Systems.',
+      p2: 'I’m passionate about turning ideas into functional and engaging web applications.',
+      p3: 'Every project is a new challenge to grow and deliver creative solutions.',
+      p4: 'Interested in working with me? Explore my projects and let’s create something amazing together.',
       btn1: "Work with me",
       btn2: "Check out my previous work"
     }

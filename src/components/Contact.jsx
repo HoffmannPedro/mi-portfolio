@@ -31,7 +31,7 @@ export default function Contact({language}) {
       if (result.isConfirmed) {
         // Si se confirma, iniciar la descarga
         const link = document.createElement('a');
-        link.href = 'https://drive.usercontent.google.com/u/0/uc?id=1zMHJaHfeF_AidwAFS3RGkjScaJ6AuQrr&export=download';
+        link.href = 'https://drive.google.com/file/d/1Jy_HUpxwn-LBPxe3vqxZ3rdFfcJMB3CR/view?usp=drive_link';
         link.download = 'CV. Pedro Hoffmann.pdf';
         document.body.appendChild(link);
         link.click();
