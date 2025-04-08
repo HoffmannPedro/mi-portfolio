@@ -20,7 +20,7 @@ export const projects = [
       en: "A practice project: a Music Festival website developed during a Fullstack Web Development course on Udemy"
     },
     image:
-      "projects-imgs/EDM-festival-image.png",
+      "/projects-imgs/EDM-festival-image.png",
     link: "https://festival-edmtech.netlify.app/",
   },
   {
@@ -31,7 +31,7 @@ export const projects = [
       en: "A basic Pokédex, developed for the JavaScript Algorithms and Data Structures course on freeCodeCamp"
     },
     image:
-      "projects-imgs/pokedex-image.png",
+      "/projects-imgs/pokedex-image.png",
     link: "https://pokedexpepe.netlify.app",
   },
   {
@@ -42,7 +42,7 @@ export const projects = [
       en: "A to-do list developed as the final project in the REACT JS course offered by UTN as part of Argentina Programa 4.0"
     },
     image:
-      "projects-imgs/listaTareas-image.png",
+      "/projects-imgs/listaTareas-image.png",
     link: "https://listatareasap.netlify.app",
   },
   {
