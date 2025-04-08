@@ -13,6 +13,17 @@ export const projects = [
     link: "https://moccablog.netlify.app",
   },
   {
+    title: "EDM Festival",
+    subtitle: "HTML / CSS / Javascript",
+    description: {
+      es: "Proyecto de práctica: un sitio web de un Festival de Música desarrollado durante un curso de Desarrollo Web Fullstack en Udemy",
+      en: "A practice project: a Music Festival website developed during a Fullstack Web Development course on Udemy"
+    },
+    image:
+      "/src/assets/EDM-festival-image.png",
+    link: "https://festival-edmtech.netlify.app/",
+  },
+  {
     title: "Pokedex",
     subtitle: "HTML / CSS / Javascript",
     description: {
@@ -20,7 +31,7 @@ export const projects = [
       en: "A basic Pokédex, developed for the JavaScript Algorithms and Data Structures course on freeCodeCamp"
     },
     image:
-      "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/65e88e713d1add0008091977/screenshot_2024-03-06-15-41-00-0000.webp&fit=cover&h=500&w=800",
+      "/src/assets/pokedex-image.png",
     link: "https://pokedexpepe.netlify.app",
   },
   {
@@ -31,7 +42,7 @@ export const projects = [
       en: "A to-do list developed as the final project in the REACT JS course offered by UTN as part of Argentina Programa 4.0"
     },
     image:
-      "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/656a228e745efd22cc73b9d0/screenshot_2023-12-01-18-15-09-0000.png&fit=cover&h=500&w=800",
+      "/src/assets/listaTareas-image.png",
     link: "https://listatareasap.netlify.app",
   },
   {
