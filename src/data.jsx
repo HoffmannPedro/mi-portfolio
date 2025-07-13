@@ -145,7 +145,7 @@ export const texts = {
     en: {
       h2: "Skills and Technologies",
       p1: "Here are some of the technologies and tools I use to build web applications.",
-      p2: "I’m always exploring new trends to stay up-to-date."
+      p2: "I'm always exploring new trends to stay up-to-date."
     }
   },
   contact: {
