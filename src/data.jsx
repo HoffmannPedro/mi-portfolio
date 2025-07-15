@@ -23,16 +23,26 @@ export const projects = [
       "/projects-imgs/EDM-festival-image.png",
     link: "https://festival-edmtech.netlify.app/",
   },
+  // {
+  //   title: "Pokedex Old",
+  //   subtitle: "HTML / CSS / Javascript",
+  //   description: {
+  //     es: "Una Pokédex básica, desarrollada como parte del curso de Algoritmos y Estructuras de Datos en JavaScript de freeCodeCamp.",
+  //     en: "A basic Pokédex built as part of the JavaScript Algorithms and Data Structures course from freeCodeCamp."
+  //   },
+  //   image:
+  //     "/projects-imgs/pokedex-image.png",
+  //   link: "https://pokedexpepe.netlify.app",
+  // },
   {
-    title: "Pokedex",
-    subtitle: "HTML / CSS / Javascript",
+    title: "Pokédex",
+    subtitle: "HTML / CSS / JavaScript / React",
     description: {
-      es: "Una Pokédex básica, desarrollada como parte del curso de Algoritmos y Estructuras de Datos en JavaScript de freeCodeCamp.",
-      en: "A basic Pokédex built as part of the JavaScript Algorithms and Data Structures course from freeCodeCamp."
+      es: "Aplicación web desarrollada con React que permite consultar información básica de distintos Pokémon mediante la PokéAPI. Fue uno de mis primeros proyectos utilizando React para practicar consumo de APIs y manejo de estados.",
+      en: "Web application built with React that allows you to look up basic information about different Pokémon using the PokéAPI. It was one of my first projects with React to practice API consumption and state management."
     },
-    image:
-      "/projects-imgs/pokedex-image.png",
-    link: "https://pokedexpepe.netlify.app",
+    image: "/projects-imgs/pokedex-image.png",
+    link: "https://pepdex.netlify.app/",
   },
   {
     title: "Task List",
