@@ -38,10 +38,10 @@ export const projects = [
     title: "Pokédex",
     subtitle: "HTML / CSS / JavaScript / React",
     description: {
-      es: "Aplicación web desarrollada con React que permite consultar información básica de distintos Pokémon mediante la PokéAPI. Fue uno de mis primeros proyectos utilizando React para practicar consumo de APIs y manejo de estados.",
-      en: "Web application built with React that allows you to look up basic information about different Pokémon using the PokéAPI. It was one of my first projects with React to practice API consumption and state management."
+      es: "Aplicación web en React que consume la PokéAPI para mostrar información básica de Pokémon, desarrollada como proyecto inicial para practicar consumo de APIs y gestión de estados.",
+      en: "Web application built with React that consumes the PokéAPI to display basic Pokémon information, developed as an initial project to practice API consumption and state management."
     },
-    image: "/projects-imgs/pokedex-image.png",
+    image: "/projects-imgs/pokedex-image.jpg",
     link: "https://pepdex.netlify.app/",
   },
   {
@@ -52,7 +52,7 @@ export const projects = [
       en: "To-do list developed as the final project of the React JS course taught by UTN in Argentina Programa 4.0."
     },
     image:
-      "/projects-imgs/listaTareas-image.png",
+      "/projects-imgs/listaTareas-image.webp",
     link: "https://listatareasap.netlify.app",
   },
   {

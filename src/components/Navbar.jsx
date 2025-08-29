@@ -42,7 +42,7 @@ export default function Navbar({ language, onLanguageChange }) {
               <div className="relative w-12 h-5 bg-gray-600 rounded-full">
                 <div
                   className={`absolute h-5 w-5 rounded-full bg-cover bg-no-repeat transition-transform duration-300 ${language === "es" ? "transform translate-x-0" : "transform translate-x-8"}`}
-                  style={{ backgroundImage: `url(${language === "es" ? "https://img.icons8.com/color/48/spain2-circular.png" : "https://img.icons8.com/color/48/great-britain-circular.png"})` }}
+                  style={{ backgroundImage: `url(${language === "es" ? "https://img.icons8.com/color/48/spain-circular--v2.png" : "https://img.icons8.com/color/48/great-britain-circular.png"})` }}
                 />
               </div>
             </div>

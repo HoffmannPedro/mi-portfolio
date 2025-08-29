@@ -5,3 +5,38 @@
 html {
     scroll-behavior: smooth;
 }
+
+.project-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 16rem;
+  /* Permite que crezca si el overlay lo necesita */
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 16rem; /* igual a h-64 */
+  overflow: hidden;
+}
+.project-container:hover,
+.project-container:focus-within {
+  max-height: 600px; /* ajusta según el contenido máximo esperado */
+}
+.project-container > img {
+  height: 16rem;
+  width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.project-container .absolute {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* El overlay no bloquea el hover */
+}
+.project-container .absolute > div {
+  pointer-events: auto; /* Pero el contenido sí puede recibir hover */
+  width: 100%;
+  max-height: none;
+  overflow: visible;
+}
