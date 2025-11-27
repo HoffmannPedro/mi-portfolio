@@ -1,69 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Swal from "sweetalert2";
 import { texts } from "../data";
+// Importamos EmailJS
+import emailjs from '@emailjs/browser';
 
 export default function Contact({ language }) {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const formRef = useRef(); // Referencia al formulario para EmailJS
 
-  // Aseguramos que la URL de la API esté definida, con un fallback por si acaso
-  const apiUrl = import.meta.env.VITE_API_URL || "https://contactform-portfolio.onrender.com";
+  // ⚠️ REEMPLAZA ESTOS VALORES CON LOS TUYOS DE EMAILJS ⚠️
+  const SERVICE_ID = "service_portfolio"; 
+  const TEMPLATE_ID = "template_portfolio";
+  const PUBLIC_KEY = "jzfD0D_iF1d12DoTU";
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // DEBUG: Verifica en la consola que la URL sea la correcta
-    console.log("Enviando formulario a:", `${apiUrl}/contact`);
-
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value
-    }
-
-    try {
-      const response = await fetch(`${apiUrl}/contact`, {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        setIsSuccess(true);
-        Swal.fire({
-          title: texts.contact[language].sbmtMsg.title,
-          text: texts.contact[language].sbmtMsg.p,
-          icon: "success",
-          background: '#0D1F22',
-          color: '#fff',
-          confirmButtonColor: '#4F46E5' // Indigo-600 para combinar con tu botón
-        });
-        
-        // Limpiar el formulario
-        e.target.reset();
-        
-        // Opcional: Recargar después de un tiempo si es necesario
-        // setTimeout(() => window.location.reload(), 3000);
-      } else {
-        throw new Error("Error al enviar el formulario.");
-      }
-    } catch (error) {
-      console.error("Error capturado:", error);
-      Swal.fire({
-        title: "Error",
-        text: "No se pudo enviar el formulario. Por favor intenta más tarde.",
-        icon: "error",
-        background: '#0D1F22',
-        color: '#fff',
-        confirmButtonColor: '#A62B1F'
-      });
-    } finally {
+    // Enviamos el formulario directamente usando la referencia
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then((result) => {
+          // Éxito
+          console.log(result.text);
+          Swal.fire({
+            title: texts.contact[language].sbmtMsg.title,
+            text: texts.contact[language].sbmtMsg.p,
+            icon: "success",
+            background: '#0D1F22',
+            color: '#fff',
+            confirmButtonColor: '#4F46E5'
+          });
+          e.target.reset(); // Limpiar inputs
+      }, (error) => {
+          // Error
+          console.error(error.text);
+          Swal.fire({
+            title: "Error",
+            text: "Hubo un problema al enviar el mensaje. Por favor intenta más tarde.",
+            icon: "error",
+            background: '#0D1F22',
+            color: '#fff',
+            confirmButtonColor: '#A62B1F'
+          });
+      })
+      .finally(() => {
         setIsSubmitting(false);
-    }
+      });
   }
 
+  // (El resto de la función handleDownloadClick se mantiene igual...)
   const handleDownloadClick = () => {
     Swal.fire({
       title: texts.contact[language].cvMsg.title,
@@ -91,7 +77,9 @@ export default function Contact({ language }) {
   return (
     <section id="contact" className="relative">
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
+        {/* Agregamos la referencia 'ref={formRef}' al formulario */}
         <form
+          ref={formRef}
           onSubmit={handleFormSubmit}
           className="flex flex-col lg:w-2/4 lg:m-auto md:w-3/4 md:m-auto w-full md:py-8 md:mt-0"
         >
@@ -113,7 +101,7 @@ export default function Contact({ language }) {
               required
               type="text"
               id="name"
-              name="name"
+              name="name" // Debe coincidir con {{name}} en EmailJS
               className="w-full bg-gray-800 rounded border-gray-700 focus:border-indigo-500 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -125,7 +113,7 @@ export default function Contact({ language }) {
               required
               type="email"
               id="email"
-              name="email"
+              name="email" // Debe coincidir con {{email}} en EmailJS
               className="w-full bg-gray-800 rounded border-gray-700 focus:border-indigo-500 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -136,7 +124,7 @@ export default function Contact({ language }) {
             <textarea
               required
               id="message"
-              name="message"
+              name="message" // Debe coincidir con {{message}} en EmailJS
               className="w-full bg-gray-800 rounded border-gray-700 focus:border-indigo-500 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -149,6 +137,8 @@ export default function Contact({ language }) {
           </button>
         </form>
       </div>
+      
+      {/* Footer y Copyright (Sin cambios) */}
       <div id="footer" className="container w-full mx-auto px-5 pb-5 flex-row md:flex justify-end">
         <div className="flex justify-center w-full md:w-1/3">
           <a href="https://www.linkedin.com/in/hoffmannpedro/" className="px-5 hover:animate-bounce">
