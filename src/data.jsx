@@ -2,15 +2,24 @@
 // Proyectos realizados.
 export const projects = [
   {
-    title: "Mocca Blog",
-    subtitle: "HTML / CSS",
+    title: "GamerStore FullStack",
+    subtitle: "Java 21 / Spring Boot / React / PostgreSQL / Docker / JWT / Tailwind",
     description: {
-      es: "Blog informativo sobre el café, desarrollado como mi primer proyecto en un curso de Desarrollo Web en Udemy.",
-      en: "An informative blog about coffee, created as my first project in a Web Development course on Udemy."
+      es: "E-commerce Full Stack desarrollado con Java 21 y React. Arquitectura segura (JWT/RBAC), gestión de estado global, panel de administración dinámico e integración con Cloudinary. Desplegado en la nube con Docker",
+      en: "Full Stack E-commerce developed with Java 21 and React. Secure architecture (JWT/RBAC), global state management, dynamic admin panel, and Cloudinary integration. Deployed to the cloud with Docker."
     },
-    image:
-      "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/61b3c1ab6bfdb1e2cc419427/screenshot_2021-12-10-21-07-57-0000.png&fit=cover&h=500&w=800",
-    link: "https://moccablog.netlify.app",
+    image: "https://res.cloudinary.com/dlvxoftyv/image/upload/v1764198956/chrome_EmSTtyps1S_nnjrms.png",
+    link: "https://gamerstore.up.railway.app/",
+  },
+  {
+    title: "Pokédex",
+    subtitle: "HTML / CSS / JavaScript / React",
+    description: {
+      es: "Aplicación web en React que consume la PokéAPI para mostrar información básica de Pokémon, desarrollada como proyecto inicial para practicar consumo de APIs y gestión de estados.",
+      en: "Web application built with React that consumes the PokéAPI to display basic Pokémon information, developed as an initial project to practice API consumption and state management."
+    },
+    image: "/projects-imgs/pokedex-image.jpg",
+    link: "https://pepdex.netlify.app/",
   },
   {
     title: "EDM Festival",
@@ -35,14 +44,15 @@ export const projects = [
   //   link: "https://pokedexpepe.netlify.app",
   // },
   {
-    title: "Pokédex",
-    subtitle: "HTML / CSS / JavaScript / React",
+    title: "Mocca Blog",
+    subtitle: "HTML / CSS",
     description: {
-      es: "Aplicación web en React que consume la PokéAPI para mostrar información básica de Pokémon, desarrollada como proyecto inicial para practicar consumo de APIs y gestión de estados.",
-      en: "Web application built with React that consumes the PokéAPI to display basic Pokémon information, developed as an initial project to practice API consumption and state management."
+      es: "Blog informativo sobre el café, desarrollado como mi primer proyecto en un curso de Desarrollo Web en Udemy.",
+      en: "An informative blog about coffee, created as my first project in a Web Development course on Udemy."
     },
-    image: "/projects-imgs/pokedex-image.jpg",
-    link: "https://pepdex.netlify.app/",
+    image:
+      "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/61b3c1ab6bfdb1e2cc419427/screenshot_2021-12-10-21-07-57-0000.png&fit=cover&h=500&w=800",
+    link: "https://moccablog.netlify.app",
   },
   {
     title: "Task List",
@@ -101,13 +111,25 @@ export const skills = [
   {
     name: "JAVA",
     icon: "icons/java.svg"
+  },
+  {
+    name: "Spring Boot",
+    icon: "icons/spring-boot.svg"
+  },
+  {
+    name: "PostgreSQL",
+    icon: "icons/postgresql.svg"
+  },
+  {
+    name: "Postman",
+    icon: "icons/postman.svg"
   }
 ];
 
 // Textos About.jsx
 export const texts = {
   about: {
-    es : {
+    es: {
       p1: 'Soy estudiante de Desarrollo Web y actualmente curso la carrera de Licenciatura en Sistemas.',
       p2: 'Me apasiona transformar ideas en aplicaciones web funcionales y atractivas.',
       p3: 'Cada proyecto representa un nuevo desafío para crecer y ofrecer soluciones creativas.',

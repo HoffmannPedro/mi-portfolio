@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import swal from 'sweetalert';
 import Swal from "sweetalert2";
@@ -21,7 +20,7 @@ export default function Contact({ language }) {
     }
 
     try {
-      const response = await fetch('https://contactform-portfolio.onrender.com/contact', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
