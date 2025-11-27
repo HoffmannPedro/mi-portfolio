@@ -1,17 +1,21 @@
-import { useState } from "react";
-import swal from 'sweetalert';
+import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { texts } from "../data";
 
 export default function Contact({ language }) {
 
-  // Funcion para ventana de confirmacion de envio de formulario.
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  // Aseguramos que la URL de la API esté definida, con un fallback por si acaso
+  const apiUrl = import.meta.env.VITE_API_URL || "https://contactform-portfolio.onrender.com";
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // DEBUG: Verifica en la consola que la URL sea la correcta
+    console.log("Enviando formulario a:", `${apiUrl}/contact`);
 
     const formData = {
       name: e.target.name.value,
@@ -20,7 +24,7 @@ export default function Contact({ language }) {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+      const response = await fetch(`${apiUrl}/contact`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -28,21 +32,36 @@ export default function Contact({ language }) {
 
       if (response.ok) {
         setIsSuccess(true);
-        swal(
-          texts.contact[language].sbmtMsg.title,
-          texts.contact[language].sbmtMsg.p,
-          "success"
-        )
-        setTimeout(() => window.location.reload(), 3000);
+        Swal.fire({
+          title: texts.contact[language].sbmtMsg.title,
+          text: texts.contact[language].sbmtMsg.p,
+          icon: "success",
+          background: '#0D1F22',
+          color: '#fff',
+          confirmButtonColor: '#4F46E5' // Indigo-600 para combinar con tu botón
+        });
+        
+        // Limpiar el formulario
+        e.target.reset();
+        
+        // Opcional: Recargar después de un tiempo si es necesario
+        // setTimeout(() => window.location.reload(), 3000);
       } else {
         throw new Error("Error al enviar el formulario.");
       }
     } catch (error) {
-      console.error("Error:", error);
-      swal("Error", "No se pudo enviar el formulario", "error");
+      console.error("Error capturado:", error);
+      Swal.fire({
+        title: "Error",
+        text: "No se pudo enviar el formulario. Por favor intenta más tarde.",
+        icon: "error",
+        background: '#0D1F22',
+        color: '#fff',
+        confirmButtonColor: '#A62B1F'
+      });
+    } finally {
+        setIsSubmitting(false);
     }
-
-    setIsSubmitting(false);
   }
 
   const handleDownloadClick = () => {
@@ -59,7 +78,6 @@ export default function Contact({ language }) {
       iconColor: '#C50808',
     }).then((result) => {
       if (result.isConfirmed) {
-        // Si se confirma, iniciar la descarga
         const link = document.createElement('a');
         link.href = 'https://drive.google.com/file/d/1Jy_HUpxwn-LBPxe3vqxZ3rdFfcJMB3CR/view?usp=drive_link';
         link.download = 'CV. Pedro Hoffmann.pdf';
@@ -92,6 +110,7 @@ export default function Contact({ language }) {
               {texts.contact[language].label1}
             </label>
             <input
+              required
               type="text"
               id="name"
               name="name"
@@ -103,6 +122,7 @@ export default function Contact({ language }) {
               {texts.contact[language].label2}
             </label>
             <input
+              required
               type="email"
               id="email"
               name="email"
@@ -114,6 +134,7 @@ export default function Contact({ language }) {
               {texts.contact[language].label3}
             </label>
             <textarea
+              required
               id="message"
               name="message"
               className="w-full bg-gray-800 rounded border-gray-700 focus:border-indigo-500 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
@@ -121,10 +142,10 @@ export default function Contact({ language }) {
           </div>
           <button
             type="submit"
-            className="text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 hover:transition-all hover:duration-300 rounded text-lg"
+            className={`text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 hover:transition-all hover:duration-300 rounded text-lg cursor-pointer ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
             disabled={isSubmitting}
           >
-            {texts.contact[language].btnSubmit}
+            {isSubmitting ? 'Enviando...' : texts.contact[language].btnSubmit}
           </button>
         </form>
       </div>
