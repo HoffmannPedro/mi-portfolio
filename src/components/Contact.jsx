@@ -1,15 +1,15 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import Swal from "sweetalert2";
 import { texts } from "../data";
 // Importamos EmailJS
 import emailjs from '@emailjs/browser';
 
+// eslint-disable-next-line react/prop-types
 export default function Contact({ language }) {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef(); // Referencia al formulario para EmailJS
 
-  // ⚠️ REEMPLAZA ESTOS VALORES CON LOS TUYOS DE EMAILJS ⚠️
   const SERVICE_ID = "service_portfolio"; 
   const TEMPLATE_ID = "template_portfolio";
   const PUBLIC_KEY = "jzfD0D_iF1d12DoTU";

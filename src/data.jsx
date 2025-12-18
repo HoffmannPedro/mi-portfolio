@@ -9,7 +9,7 @@ export const projects = [
       en: "Full Stack E-commerce developed with Java 21 and React. Secure architecture (JWT/RBAC), global state management, dynamic admin panel, and Cloudinary integration. Deployed to the cloud with Docker."
     },
     image: "https://res.cloudinary.com/dlvxoftyv/image/upload/v1764198956/chrome_EmSTtyps1S_nnjrms.png",
-    link: "https://gamerstore.up.railway.app/",
+    link: "https://gamer-store-teal.vercel.app/",
   },
   {
     title: "Pokédex",
