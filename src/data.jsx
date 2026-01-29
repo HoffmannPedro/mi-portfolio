@@ -2,13 +2,13 @@
 // Proyectos realizados.
 export const projects = [
   {
-    title: "GamerStore FullStack",
+    title: "GamerStore",
     subtitle: "Java 21 / Spring Boot / React / PostgreSQL / Docker / JWT / Tailwind",
     description: {
       es: "E-commerce Full Stack desarrollado con Java 21 y React. Arquitectura segura (JWT/RBAC), gestión de estado global, panel de administración dinámico e integración con Cloudinary. Desplegado en la nube con Docker",
       en: "Full Stack E-commerce developed with Java 21 and React. Secure architecture (JWT/RBAC), global state management, dynamic admin panel, and Cloudinary integration. Deployed to the cloud with Docker."
     },
-    image: "https://res.cloudinary.com/dlvxoftyv/image/upload/v1764198956/chrome_EmSTtyps1S_nnjrms.png",
+    image: "https://res.cloudinary.com/dlvxoftyv/image/upload/v1769645257/ascreenshot_xxywc0.jpg",
     link: "https://gamer-store-teal.vercel.app/",
   },
   {
