@@ -5,6 +5,7 @@ import Contact from "./components/Contact.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Projects from "./components/Projects.jsx";
 import Skills from "./components/Skills.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 function App() {
   const [language, setLanguage] = useState("es");
@@ -21,6 +22,7 @@ function App() {
         <Projects language={language} />
         <Skills language={language} />
         <Contact language={language} />
+        <ScrollToTop />
       </main>
     </>
   );

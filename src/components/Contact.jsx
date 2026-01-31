@@ -1,77 +1,41 @@
 import { useState, useRef } from "react";
 import Swal from "sweetalert2";
 import { texts } from "../data";
-// Importamos EmailJS
 import emailjs from '@emailjs/browser';
+import { handleDownloadCV } from "../utils/downloadCV";
 
-// eslint-disable-next-line react/prop-types
 export default function Contact({ language }) {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef(); // Referencia al formulario para EmailJS
 
-  const SERVICE_ID = "service_portfolio"; 
-  const TEMPLATE_ID = "template_portfolio";
-  const PUBLIC_KEY = "jzfD0D_iF1d12DoTU";
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Enviamos el formulario directamente usando la referencia
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
       .then((result) => {
-          // Éxito
-          console.log(result.text);
-          Swal.fire({
-            title: texts.contact[language].sbmtMsg.title,
-            text: texts.contact[language].sbmtMsg.p,
-            icon: "success",
-            background: '#0D1F22',
-            color: '#fff',
-            confirmButtonColor: '#4F46E5'
-          });
-          e.target.reset(); // Limpiar inputs
-      }, (error) => {
-          // Error
-          console.error(error.text);
-          Swal.fire({
-            title: "Error",
-            text: "Hubo un problema al enviar el mensaje. Por favor intenta más tarde.",
-            icon: "error",
-            background: '#0D1F22',
-            color: '#fff',
-            confirmButtonColor: '#A62B1F'
-          });
+        Swal.fire({
+          title: texts.contact[language].sbmtMsg.title,
+          text: texts.contact[language].sbmtMsg.p,
+          icon: "success",
+          background: '#0D1F22',
+          color: '#fff',
+          confirmButtonColor: '#4F46E5'
+        });
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error(error.text);
+        // Opcional: Agregar un Swal de error aquí
       })
       .finally(() => {
-        setIsSubmitting(false);
+        setIsSubmitting(false); // Importante: devolvemos el estado a false
       });
-  }
-
-  // (El resto de la función handleDownloadClick se mantiene igual...)
-  const handleDownloadClick = () => {
-    Swal.fire({
-      title: texts.contact[language].cvMsg.title,
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: texts.contact[language].cvMsg.confirmBtn,
-      cancelButtonText: texts.contact[language].cvMsg.cancelBtn,
-      background: '#0D1F22',
-      color: '#fff',
-      confirmButtonColor: '#2E5902',
-      cancelButtonColor: '#A62B1F',
-      iconColor: '#C50808',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        const link = document.createElement('a');
-        link.href = 'https://drive.google.com/file/d/1Jy_HUpxwn-LBPxe3vqxZ3rdFfcJMB3CR/view?usp=drive_link';
-        link.download = 'CV. Pedro Hoffmann.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-    });
   };
 
   return (
@@ -128,16 +92,22 @@ export default function Contact({ language }) {
               className="w-full bg-gray-800 rounded border-gray-700 focus:border-indigo-500 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             />
           </div>
+          {/* Botón de envío optimizado */}
           <button
             type="submit"
-            className={`text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 hover:transition-all hover:duration-300 rounded text-lg cursor-pointer ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
             disabled={isSubmitting}
+            className={`text-white border-0 py-2 px-6 focus:outline-none rounded text-lg transition-all ${isSubmitting
+                ? "bg-gray-600 cursor-not-allowed"
+                : "bg-indigo-500 hover:bg-indigo-600"
+              }`}
           >
-            {isSubmitting ? 'Enviando...' : texts.contact[language].btnSubmit}
+            {isSubmitting
+              ? texts.contact[language].sending
+              : texts.contact[language].btnSubmit}
           </button>
         </form>
       </div>
-      
+
       {/* Footer y Copyright (Sin cambios) */}
       <div id="footer" className="container w-full mx-auto px-5 pb-5 flex-row md:flex justify-end">
         <div className="flex justify-center w-full md:w-1/3">
@@ -150,7 +120,7 @@ export default function Contact({ language }) {
         </div>
         <div className="flex justify-center pt-5 md:pt-0 md:justify-end md:w-1/3">
           <div className="flex hover:scale-110 hover:transition-all">
-            <button onClick={handleDownloadClick} className="content-center text-white font-semibold text-lg">{texts.contact[language].btnCv}</button>
+            <button onClick={() => handleDownloadCV(language)} className="content-center text-white font-semibold text-lg">{texts.contact[language].btnCv}</button>
             <img src="https://img.icons8.com/color/48/000000/pdf.png" alt="pdf" className="size-8 my-auto" />
           </div>
           <span className="relative flex h-3 w-3 lg:mr-5 top-2">

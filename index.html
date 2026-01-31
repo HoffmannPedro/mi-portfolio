@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.png"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Portfolio Pedro Hoffmann</title>
-  </head>
-  <body>
-    <form
-      name="contact"
-      netlify
-      netlify-honeypot="bot-field"
-      hidden
-    >
-      <input
-        type="text"
-        name="name"
-      />
-      <input
-        type="email"
-        name="email"
-      />
-      <textarea name="message"></textarea>
-    </form>
-    <div id="root"></div>
-    <script
-      type="module"
-      src="/src/main.jsx"
-    ></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro Hoffmann | Full Stack Developer</title>
+  <meta name="description"
+    content="Portfolio de Pedro Hoffmann. Desarrollador Full Stack orientado a Java, Spring Boot y React.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://phoffmannport.netlify.app/">
+  <meta property="og:title" content="Pedro Hoffmann | Full Stack Developer">
+  <meta property="og:description" content="Explora mis proyectos y habilidades en desarrollo web con Java y React.">
+  <meta property="og:image"
+    content="https://res.cloudinary.com/dlvxoftyv/image/upload/v1769645257/ascreenshot_xxywc0.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Pedro Hoffmann | Full Stack Developer">
+  <meta property="twitter:description" content="Desarrollador Java & React. Estudiante de Licenciatura en Sistemas.">
+</head>
+
+<body>
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

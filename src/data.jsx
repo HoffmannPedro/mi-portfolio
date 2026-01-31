@@ -3,77 +3,62 @@
 export const projects = [
   {
     title: "GamerStore",
-    subtitle: "Java 21 / Spring Boot / React / PostgreSQL / Docker / JWT / Tailwind",
+    subtitle: "Java 21 / Spring Boot / React / PostgreSQL / Docker",
     description: {
-      es: "E-commerce Full Stack desarrollado con Java 21 y React. Arquitectura segura (JWT/RBAC), gestión de estado global, panel de administración dinámico e integración con Cloudinary. Desplegado en la nube con Docker",
-      en: "Full Stack E-commerce developed with Java 21 and React. Secure architecture (JWT/RBAC), global state management, dynamic admin panel, and Cloudinary integration. Deployed to the cloud with Docker."
+      es: "E-commerce Full Stack con arquitectura de capas. Implementé seguridad con JWT/RBAC, gestión de estados complejos y persistencia en PostgreSQL. Optimizado para escalabilidad y desplegado con Docker.",
+      en: "Full Stack e-commerce with layered architecture. Implemented JWT/RBAC security, complex state management, and PostgreSQL persistence. Optimized for scalability and deployed via Docker."
     },
     image: "https://res.cloudinary.com/dlvxoftyv/image/upload/v1769645257/ascreenshot_xxywc0.jpg",
     link: "https://gamer-store-teal.vercel.app/",
   },
   {
     title: "Pokédex",
-    subtitle: "HTML / CSS / JavaScript / React",
+    subtitle: "React / API Rest / JavaScript / CSS",
     description: {
-      es: "Aplicación web en React que consume la PokéAPI para mostrar información básica de Pokémon, desarrollada como proyecto inicial para practicar consumo de APIs y gestión de estados.",
-      en: "Web application built with React that consumes the PokéAPI to display basic Pokémon information, developed as an initial project to practice API consumption and state management."
+      es: "Aplicación interactiva que consume datos de PokéAPI. Enfocada en la gestión de estados dinámicos, manejo de promesas (Fetch) y renderizado condicional para una navegación fluida.",
+      en: "Interactive app consuming PokéAPI data. Focused on dynamic state management, promise handling (Fetch), and conditional rendering for a seamless user experience."
     },
     image: "/projects-imgs/pokedex-image.jpg",
     link: "https://pepdex.netlify.app/",
   },
   {
     title: "EDM Festival",
-    subtitle: "HTML / CSS / Javascript",
+    subtitle: "HTML / CSS / JavaScript",
     description: {
-      es: "Sitio web para un festival de música electrónica, realizado como práctica en un curso de Desarrollo Web Fullstack en Udemy.",
-      en: "Website for an electronic music festival, built as a practice project during a Fullstack Web Development course on Udemy."
+      es: "Landing page responsiva con diseño moderno y 'Mobile First'. Aplicación de metodologías CSS avanzadas y optimización de recursos multimedia para mejorar el rendimiento de carga.",
+      en: "Responsive landing page with a modern 'Mobile First' design. Built using advanced CSS methodologies and multimedia optimization to enhance loading performance."
     },
-    image:
-      "/projects-imgs/EDM-festival-image.png",
+    image: "/projects-imgs/EDM-festival-image.png",
     link: "https://festival-edmtech.netlify.app/",
   },
-  // {
-  //   title: "Pokedex Old",
-  //   subtitle: "HTML / CSS / Javascript",
-  //   description: {
-  //     es: "Una Pokédex básica, desarrollada como parte del curso de Algoritmos y Estructuras de Datos en JavaScript de freeCodeCamp.",
-  //     en: "A basic Pokédex built as part of the JavaScript Algorithms and Data Structures course from freeCodeCamp."
-  //   },
-  //   image:
-  //     "/projects-imgs/pokedex-image.png",
-  //   link: "https://pokedexpepe.netlify.app",
-  // },
   {
     title: "Mocca Blog",
-    subtitle: "HTML / CSS",
+    subtitle: "HTML5 / CSS3 / Flexbox / Grid",
     description: {
-      es: "Blog informativo sobre el café, desarrollado como mi primer proyecto en un curso de Desarrollo Web en Udemy.",
-      en: "An informative blog about coffee, created as my first project in a Web Development course on Udemy."
+      es: "Estructura de blog profesional maquetada con HTML5 semántico. Uso estratégico de Flexbox y CSS Grid para lograr una interfaz adaptable, limpia y enfocada en la legibilidad.",
+      en: "Professional blog structure built with semantic HTML5. Strategic use of Flexbox and CSS Grid to achieve an adaptive, clean interface focused on readability."
     },
-    image:
-      "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/61b3c1ab6bfdb1e2cc419427/screenshot_2021-12-10-21-07-57-0000.png&fit=cover&h=500&w=800",
+    image: "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/61b3c1ab6bfdb1e2cc419427/screenshot_2021-12-10-21-07-57-0000.png&fit=cover&h=500&w=800",
     link: "https://moccablog.netlify.app",
   },
   {
     title: "Task List",
-    subtitle: "HTML / CSS / Javascript / React / MaterialUI",
+    subtitle: "React / MaterialUI / JavaScript",
     description: {
-      es: "Lista de tareas desarrollada como proyecto final del curso de React JS dictado por UTN en Argentina Programa 4.0.",
-      en: "To-do list developed as the final project of the React JS course taught by UTN in Argentina Programa 4.0."
+      es: "Gestor de tareas con lógica CRUD funcional. Implementado en React utilizando Material UI para los componentes de interfaz, garantizando un diseño limpio y profesional.",
+      en: "Task manager with functional CRUD logic. Built in React using Material UI for interface components, ensuring a clean and professional UI design."
     },
-    image:
-      "/projects-imgs/listaTareas-image.webp",
+    image: "/projects-imgs/listaTareas-image.webp",
     link: "https://listatareasap.netlify.app",
   },
   {
     title: "Calculadora",
-    subtitle: "HTML / CSS / Javascript",
+    subtitle: "JavaScript / DOM / CSS",
     description: {
-      es: "Calculadora simple que realiza operaciones básicas: suma, resta, multiplicación y división.",
-      en: "Simple calculator that performs basic operations: addition, subtraction, multiplication, and division."
+      es: "Aplicación lógica basada en el manejo de eventos de JavaScript. Resolución de operaciones mediante manipulación del DOM y gestión de tipos de datos en tiempo real.",
+      en: "Logic-driven application based on JavaScript event handling. Solves operations through DOM manipulation and real-time data type management."
     },
-    image:
-      "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/653b0549468d5e00084b6a1d/screenshot_2023-10-27-00-33-21-0000.png&fit=cover&h=500&w=800",
+    image: "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/653b0549468d5e00084b6a1d/screenshot_2023-10-27-00-33-21-0000.png&fit=cover&h=500&w=800",
     link: "https://calculadoracursojs.netlify.app",
   }
 ];
@@ -130,18 +115,18 @@ export const skills = [
 export const texts = {
   about: {
     es: {
-      p1: 'Soy estudiante de Desarrollo Web y actualmente curso la carrera de Licenciatura en Sistemas.',
-      p2: 'Me apasiona transformar ideas en aplicaciones web funcionales y atractivas.',
-      p3: 'Cada proyecto representa un nuevo desafío para crecer y ofrecer soluciones creativas.',
-      p4: '¿Querés trabajar conmigo? Explorá mis proyectos y descubramos cómo podemos crear algo increíble juntos.',
+      p1: 'Desarrollador Full Stack | Estudiante de Licenciatura en Sistemas',
+      p2: 'Especializado en construir aplicaciones web funcionales y eficientes utilizando Java, Spring Boot y React.',
+      p3: 'Mi enfoque combina la formación académica con la creación de soluciones escalables y un código bien estructurado.',
+      p4: '¿Buscás un perfil técnico comprometido con la calidad? Te invito a explorar mis proyectos y contactarme.',
       btn1: 'Trabaja conmigo',
       btn2: 'Mira mis trabajos anteriores'
     },
     en: {
-      p1: 'I’m a Web Development student currently pursuing a Bachelor’s Degree in Information Systems.',
-      p2: 'I’m passionate about turning ideas into functional and engaging web applications.',
-      p3: 'Every project is a new challenge to grow and deliver creative solutions.',
-      p4: 'Interested in working with me? Explore my projects and let’s create something amazing together.',
+      p1: 'Full Stack Developer | B.S. in Computer Science Student.',
+      p2: 'Focused on developing high-performance, functional web applications with expertise in Java, Spring Boot, and React.',
+      p3: 'I bridge the gap between academic theory and practical execution, focusing on scalable solutions and clean, well-structured code.',
+      p4: 'Are you looking for a quality-driven technical profile? I invite you to explore my projects and get in touch.',
       btn1: "Work with me",
       btn2: "Check out my previous work"
     }
@@ -190,6 +175,7 @@ export const texts = {
       label2: "Correo Electrónico",
       label3: "Mensaje",
       btnSubmit: "Enviar",
+      sending: "Enviando...",
       btnCv: "¡Descarga mi CV!",
       copyright: "Desarrollado por Pedro Hoffmann ©",
 
@@ -212,6 +198,7 @@ export const texts = {
       label2: "Email",
       label3: "Message",
       btnSubmit: "Send",
+      sending: "Sending...",
       btnCv: "Download my resume!",
       copyright: "Developed by Pedro Hoffmann ©",
 
